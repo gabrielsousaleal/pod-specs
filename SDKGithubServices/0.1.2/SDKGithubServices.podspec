@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.subspecs "Debug" do |debug|
        debug.source_files = 'SDKGithubServices/SDKGithubServices/Sources/**/*'
+       debug.resources = 'SDKGithubServices/SDKGithubServices/Resources/**/*'
   end
  
   spec.subspecs "Core" do |release|
