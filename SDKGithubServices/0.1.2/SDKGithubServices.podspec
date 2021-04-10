@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   end
  
   spec.subspecs "Core" do |release|
-       release.vendored_frameworks = 'SDKGithubServices.xcframwork'
+       release.vendored_frameworks = 'SDKGithubServices.xcframework'
   end
 
   spec.ios.deployment_target = '10.0'
