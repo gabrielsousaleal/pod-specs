@@ -10,8 +10,16 @@ Pod::Spec.new do |spec|
   spec.author           = { 'Gabriel Sousa Leal' => 'gabrielsousaleal@hotmail.com' }
   spec.source           = { :git => 'https://github.com/gabrielsousaleal/SDKGithubServices.git', :tag => spec.version.to_s }
   spec.platform = :ios, '10.0'
+
+  spec.default_subspecs = 'Core'
+
+  spec.subspecs "Debug" do |debug|
+       debug.source_files = 'SDKGithubServices/SDKGithubServices/Sources/**/*'
+  end
  
-  spec.source_files = 'SDKGithubServices/SDKGithubServices/Sources/**/*'
+  spec.subspecs "Core" do |release|
+       release.vendored_frameworks = 'SDKGithubServices.xcframwork'
+  end
 
   spec.ios.deployment_target = '10.0'
   
