@@ -13,12 +13,12 @@ Pod::Spec.new do |spec|
 
   spec.default_subspecs = 'Core'
 
-  spec.subspecs "Debug" do |debug|
+  spec.subspec "Debug" do |debug|
        debug.source_files = 'SDKGithubServices/SDKGithubServices/Sources/**/*'
        debug.resources = 'SDKGithubServices/SDKGithubServices/Resources/**/*'
   end
  
-  spec.subspecs "Core" do |release|
+  spec.subspec "Core" do |release|
        release.vendored_frameworks = 'SDKGithubServices.xcframework'
   end
 
